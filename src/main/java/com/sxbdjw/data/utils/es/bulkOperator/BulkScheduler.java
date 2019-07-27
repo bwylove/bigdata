@@ -1,6 +1,6 @@
-package com.sxbdjw.data.es.bulkOperator;
+package com.sxbdjw.data.utils.es.bulkOperator;
 
-import com.sxbdjw.data.es.conn.Connection;
+import com.sxbdjw.data.utils.es.conn.Connection;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.elasticsearch.action.bulk.BulkItemResponse;

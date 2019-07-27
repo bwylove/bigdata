@@ -1,6 +1,6 @@
-package com.sxbdjw.data.es.bulkOperator;
+package com.sxbdjw.data.utils.es.bulkOperator;
 
-import com.sxbdjw.data.es.conn.Connection;
+import com.sxbdjw.data.utils.es.conn.Connection;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.elasticsearch.action.bulk.BackoffPolicy;
@@ -9,8 +9,6 @@ import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.Client;
-import org.elasticsearch.common.unit.ByteSizeUnit;
-import org.elasticsearch.common.unit.ByteSizeValue;
 import org.elasticsearch.common.unit.TimeValue;
 
 import java.util.concurrent.locks.Lock;
@@ -77,9 +75,6 @@ public class BulkProcessorScheduler {
         }
         return this;
     }
-
-
-
 
 
 }

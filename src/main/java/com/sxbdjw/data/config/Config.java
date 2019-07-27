@@ -15,4 +15,13 @@ public class Config {
     // ElasticSearch的类型名称
     public static final String TYPE_NAME = "bdjw";
 
+
+    //zookeeper
+    public static final String hbase_zookeeper_quorum="192.168.81.21,192.168.81.22,192.168.81.23";
+
+    //zookeeper Port
+    public  static final String hbase_zookeeper_property_clientPort="2181";
+
+
+
 }

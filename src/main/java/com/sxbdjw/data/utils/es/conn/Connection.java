@@ -1,4 +1,4 @@
-package com.sxbdjw.data.es.conn;
+package com.sxbdjw.data.utils.es.conn;
 
 import com.sxbdjw.data.config.Config;
 import org.apache.commons.logging.Log;
