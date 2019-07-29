@@ -58,5 +58,13 @@ public class HbaseUtils {
         }
     }
 
-
+//    public static void main(String[] args) {
+//        String tableName = "course_clickcount";
+//        String rowkey = "20181111_88";
+//        String cf = "info";
+//        String column = "click_count";
+//        String value = "2";
+//
+//        HbaseUtils.getInstance().put(tableName,rowkey,cf,column,value);
+//    }
 }
