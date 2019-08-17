@@ -2,12 +2,14 @@ package com.sxbdjw.data.utils.hbase;
 
 import com.sxbdjw.data.config.Config;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.client.HBaseAdmin;
-import org.apache.hadoop.hbase.client.HTable;
-import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.filter.Filter;
+import org.apache.hadoop.hbase.filter.PrefixFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HbaseUtils {
 
@@ -58,13 +60,4 @@ public class HbaseUtils {
         }
     }
 
-//    public static void main(String[] args) {
-//        String tableName = "course_clickcount";
-//        String rowkey = "20181111_88";
-//        String cf = "info";
-//        String column = "click_count";
-//        String value = "2";
-//
-//        HbaseUtils.getInstance().put(tableName,rowkey,cf,column,value);
-//    }
 }

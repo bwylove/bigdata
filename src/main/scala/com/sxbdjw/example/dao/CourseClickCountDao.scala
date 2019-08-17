@@ -1,6 +1,7 @@
-package com.sxbdjw.test
+package com.sxbdjw.example.dao
 
 import com.sxbdjw.data.utils.hbase.HbaseUtils
+import com.sxbdjw.example.domain.CourseClickCount
 import org.apache.hadoop.hbase.client.Get
 import org.apache.hadoop.hbase.util.Bytes
 
@@ -30,18 +31,4 @@ object CourseClickCountDao {
       0l
     }else{Bytes.toLong(value)}
   }
-
-//  def main(args: Array[String]): Unit = {
-//    val list = new ListBuffer[CourseClickCount]
-//    list.append(CourseClickCount("20181111_8",8))
-//    list.append(CourseClickCount("20181111_9",9))
-//    list.append(CourseClickCount("20181111_1",100))
-//
-////    save(list)
-//
-//    println(count("20181111_8"))
-//    println(count("20181111_9"))
-//  }
-
-
 }

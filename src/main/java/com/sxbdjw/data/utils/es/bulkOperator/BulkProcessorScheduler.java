@@ -8,6 +8,7 @@ import org.elasticsearch.action.bulk.BulkProcessor;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.unit.TimeValue;
 
@@ -61,7 +62,7 @@ public class BulkProcessorScheduler {
         this.client.close();
         this.bulkProcessor.close();
     }
-
+//删除操作
     public BulkProcessorScheduler add(DeleteRequest deleteRequest) {
         commitBulkLock.lock();
         try {
@@ -75,6 +76,21 @@ public class BulkProcessorScheduler {
         }
         return this;
     }
+    //修改
+    public BulkProcessorScheduler add(UpdateRequest updateRequest){
+        commitBulkLock.lock();
+        try {
+            this.client = Connection.getTransportNodeConn();
+            this.bulkProcessor.add(updateRequest);
+            return this;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            commitBulkLock.unlock();
+        }
+        return this;
+    }
+
 
 
 }
